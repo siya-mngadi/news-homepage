@@ -3,11 +3,11 @@
     <div class="col-md-8">
       <div class="main-content">
         <div class="main-img">
-          <v-img :src="homeIcon" />
+          <v-img :src="homeIcon" alt="home image" />
         </div>
         <div class="row my-4">
           <div class="col-sm-6">
-            <h1>The Bright Future of Web 3.0?</h1>
+            <h2>The Bright Future of Web 3.0?</h2>
           </div>
           <div class="col-sm-6">
             <div>
@@ -25,27 +25,27 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="side-section" id="new">
-        <h1>New</h1>
+      <aside class="side-section" id="new">
+        <h2>New</h2>
 
         <template v-for="(newItem, index) in news" :key="newItem.title">
           <section class="side-item">
-            <h5>{{ newItem.title }}</h5>
-            <span>{{ newItem.body }}</span>
+            <h4>{{ newItem.title }}</h4>
+            <p>{{ newItem.body }}</p>
           </section>
           <v-divider v-if="index < news.length - 1"></v-divider>
         </template>
-      </div>
+      </aside>
     </div>
   </div>
   <div class="secondary-section" id="popular">
     <div class="row">
       <template v-for="(item, index) in points" :key="index">
-        <div class="col-md-4">
+        <section class="col-md-4">
           <v-card :elevation="0">
             <div class="card-content">
               <div class="card-image">
-                <v-img :height="125" aspect-ratio="1" :src="item.img" />
+                <v-img :height="125" aspect-ratio="1" :alt="item.title" :src="item.img" />
               </div>
               <div class="card-info">
                 <h4>0{{ index + 1 }}</h4>
@@ -54,7 +54,7 @@
               </div>
             </div>
           </v-card>
-        </div>
+        </section>
       </template>
     </div>
   </div>
@@ -131,7 +131,7 @@ const homeIcon = computed(() => {
   color: var(--off-white);
   background-color: var(--very-dark-blue);
 
-  h1 {
+  h2 {
     color: var(--orange-soft);
   }
 
@@ -139,9 +139,8 @@ const homeIcon = computed(() => {
     margin-top: 2rem;
     min-height: 5rem;
 
-    span {
+    p {
       color: var(--grayish-blue);
-      font-size: 13px;
     }
   }
 }

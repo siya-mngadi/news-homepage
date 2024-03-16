@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm navbar-light bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#home">
-        <v-img :width="50" aspect-ratio="16/9" cover :src="appIcon" />
+        <v-img :width="50" aspect-ratio="16/9" alt="logo" cover :src="appIcon" />
       </a>
       <button
         class="navbar-toggler shadow-none border-0"
@@ -12,7 +12,7 @@
         aria-controls="navbarToggle"
         aria-label="Toggle navigation"
       >
-        <v-img :width="50" aspect-ratio="16/9" cover :src="menuIcon" />
+        <v-img :width="50" aspect-ratio="16/9" cover alt="menu icon" :src="menuIcon" />
       </button>
 
       <div
@@ -31,7 +31,7 @@
             :ripple="false"
           >
             <template #default>
-              <v-img :width="35" aspect-ratio="auto" cover :src="closeIcon" />
+              <v-img :width="35" aspect-ratio="auto" cover alt="close icon" :src="closeIcon" />
             </template>
           </v-btn>
         </div>
@@ -42,6 +42,7 @@
               <li class="nav-item mx-2" @click="() => handleClick(link)">
                 <a
                   class="nav-link"
+                  :aria-label="link"
                   :class="{ active: selectedLink === link }"
                   aria-current="page"
                   :href="`#${link?.toLowerCase()}`"
