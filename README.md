@@ -79,7 +79,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [news-homepage](https://github.com/siya-mngadi/news-homepage)
-- Live Site URL: [new-homepage](https://puqu.netlify.app/)
+- Live Site URL: [new-homepage](https://hpageui.netlify.app/)
 
 ### Built with
 
